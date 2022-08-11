@@ -3,35 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Order summary card</title>
+  <title>Frontend Mentor | Order Summary Card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
   <style>
+    body
+    {
+      background-color: hsl(225, 100%, 94%);
+      text-align: center;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      font-family: "Red Hat Display";
+    }
+    .card
+    {
+      border-radius: 1rem;
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      text-align: center;
+      background-color: white;
+      width:23vw;
+      margin-top: 5rem;
+      border: 1px solid black;
+      padding:0rem
+    }
+    img
+    {
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      width:100%;
+    }
+    h1
+    {
+      margin: 1rem .25rem .25rem
+    }
+    .bodyText
+    {
+     text-align: center; 
+     display: flex;
+     flex-direction:column ;
+     font-size: 16px;
+     margin:0 1rem 2rem 1rem;
+    }
+    .plan
+    {
+      background-color:hsl(207, 27%, 94%);
+      margin:auto;
+      padding:.5rem;
+      border-radius: .5rem;
+      display:flex;
+      flex-direction: row;
+    }
+    .checkout
+    {
+      border-radius: .5rem;
+      background-color:hsl(245, 75%, 52%) ;
+      color:white;
+      padding:.75rem;
+      border: 0;
+      font-weight: 700;
+      box-shadow: 5px 5px 10px 1px rgba(0, 0, 255, .2);
+      margin-bottom:1rem ;
+    }
+    .note
+    {
+      width:16%;
+      border-radius: 2rem;
+    }
+    .change
+    {
+      padding:.5rem;
+    }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main class="card">
+    <div class="imageBox">
+      <img src="images/illustration-hero.svg" alt="Music Guy" class="musicGuy">
+    </div>
+    <div class="bodyText">
+      <h1>
+        Order Summary
+      </h1>
+      <p>
+      You can now listen to millions of songs, audiobooks, and podcasts on any 
+      device anywhere you like!
+      <div class="plan">
+          <img src="images/icon-music.svg" alt="" class="note">
+          <span>
+          <b>Annual Plan</b>
+          $59.99/year
+        </span>
+        <span class="change">
+          Change
+        </span>
+      </div>
+      
+      </p>
+      <button class="checkout">
+        Proceed to Payment
+      </button>
+      <a>
+        Cancel Order
+      </a>
+    </div>
+  </main>
 </body>
 </html>
